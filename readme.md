@@ -52,13 +52,5 @@
     $ php artisan serve.
     (From this link you can run the project)
 ~~~
-Now this project is ready to run. For admin, Email `admin@bookshop.com` password `secret`. For user, Email `user@bookshop.com` password `secret`.
+Now this project is ready to run. For admin, Email `mike@mike.com` password `12345`. For user, Email `bryan@bryan.com` password `12345`.
  
- ___If you would find any errors or issues you can mention in issues or raise a pull request. Fell free to contributing in this project.___
- 
- 
-***
-
-&copy; [Tahmid Nishat](http://tahmid-ni7.github.io/portfolio)
-
-`Full-stack web developer & CS Engineer`
