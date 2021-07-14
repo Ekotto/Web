@@ -18,9 +18,9 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('description');
-            $table->integer('author_id')->unsigned()->index();
-            $table->integer('category_id')->unsigned()->index();
-            $table->integer('image_id')->unsigned()->index();
+            $table->bigInteger('author_id')->unsigned()->index();
+            $table->bigInteger('category_id')->unsigned()->index();
+            $table->bigInteger('image_id')->unsigned()->index();
             $table->bigInteger('quantity');
             $table->bigInteger('init_price');
             $table->integer('discount_rate');

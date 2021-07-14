@@ -82,3 +82,5 @@ Route::group(['middleware' => 'user'], function (){
 // End of users route
 
 Route::get('/logout', 'CustomLogoutController@logout')->name('logout');
+
+

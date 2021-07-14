@@ -83,3 +83,4 @@
         </div>
     </div>
 @endsection
+{{-- <a href="/download/filename.pdf">File Name</a> // update to your own "filename.ext" --}}
