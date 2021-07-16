@@ -36,9 +36,9 @@ class BooksTableSeeder extends Seeder
                 'author_id'     => rand(1,8),
                 'category_id'   => rand(1,6),
                 'image_id'      => rand(1,30),
-                'quantity'      => rand(10, 40),
+                // 'quantity'      => rand(10, 40),
                 'init_price'    => $init_price,
-                'discount_rate' => $discount_rate,
+                // 'discount_rate' => $discount_rate,
                 'price'         => $final_price,
                 'created_at'    => Carbon::now()->format('Y-m-d H:i:s')
 

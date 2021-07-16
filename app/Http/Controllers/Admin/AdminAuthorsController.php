@@ -56,7 +56,7 @@ class AdminAuthorsController extends Controller
             $name = time().$file->getClientOriginalName();
 
             $image_resize = Photo::make($file->getRealPath());
-            $image_resize->resize(150,150);
+            $image_resize->resize(500,500);
             $image_resize->save(public_path('assets/img/' .$name));
 
             $image = Image::create(['file'=>$name]);

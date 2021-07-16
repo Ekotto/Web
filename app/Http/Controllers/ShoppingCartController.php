@@ -11,34 +11,44 @@ class ShoppingCartController extends Controller
     {
         $book = Book::findOrFail($request->book_id);
 
-        if ($book->quantity >= $request->quantity){
+        // if ($book->quantity >= $request->quantity){
 
-            if ($request->quantity >= 1)
-            {
-                $cartItem = Cart::add([
-                    'id' => $book->id,
-                    'name' => $book->title,
-                    'price' => $book->price,
-                    'qty' => $request->quantity,
-                    'weight' => 0,
-                    'options' => [
-                        'image' => $book->image
-                    ]
-                ]);
-                return redirect()->back();
-            }
-            else
-                {
-                return redirect()->back()
-                    ->with('cart_alert', "Quantity must be larger than 0");
-                }
+        //     if ($request->quantity >= 1)
+        //     {
+        //         $cartItem = Cart::add([
+        //             'id' => $book->id,
+        //             'name' => $book->title,
+        //             'price' => $book->price,
+        //             'qty' => $request->quantity,
+        //             'weight' => 0,
+        //             'options' => [
+        //                 'image' => $book->image
+        //             ]
+        //         ]);
+        //         return redirect()->back();
+        //     }
+        //     else
+        //         {
+        //         return redirect()->back()
+        //             ->with('cart_alert', "Quantity must be larger than 0");
+        //         }
 
-        }
-        else {
-            return redirect()->back()
-                ->with('cart_alert', "We don't have that much quantity.");
-        }
-
+        // }
+        // else {
+        //     return redirect()->back()
+        //         ->with('cart_alert', "We don't have that much quantity.");
+        // }
+        $cartItem = Cart::add([
+            'id' => $book->id,
+            'name' => $book->title,
+            'price' => $book->price,
+            'qty' => $request->quantity,
+            'weight' => 0,
+            'options' => [
+                'image' => $book->image
+            ]
+        ]);
+        return redirect()->back();
     }
 
     public function cart()
@@ -55,16 +65,18 @@ class ShoppingCartController extends Controller
     {
         $book = Book::findOrFail($book_id);
 
-        if($book->quantity > $qty)
-        {
-            Cart::update($id, $qty+1);
+        // if($book->quantity > $qty)
+        // {
+        //     Cart::update($id, $qty+1);
+        //     return redirect()->back();
+        // }
+        // else
+        // {
+        //     return redirect()->back()
+        //         ->with('cart_alert', "No more quantity left in stock for this book");
+        // }
+        Cart::update($id, $qty+1);
             return redirect()->back();
-        }
-        else
-        {
-            return redirect()->back()
-                ->with('cart_alert', "No more quantity left in stock for this book");
-        }
 
     }
 

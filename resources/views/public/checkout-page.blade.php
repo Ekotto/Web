@@ -10,7 +10,7 @@
                     <table class="table table-bordered">
                         <thead>
                         <tr>
-                            <th scope="col">Book</th>
+                            <th scope="col">Book Name</th>
                             <th scope="col">Quantity</th>
                             <th scope="col">Price</th>
                             <th scope="col">Sub Total</th>
@@ -30,11 +30,11 @@
                 </div>
 
                 <div class="billing-address my-4">
-                    <div class="p-3 bg-light my-4"><h4 class="m-0">Billing address</h4></div>
+                    <div class="p-3 bg-light my-4"><h4 class="m-0">You can proceed</h4></div>
 
                     <form action="{{route('cart.proceed')}}" method="post">
                         @csrf
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <input type="text" name="shipping_name" class="form-control {{$errors->has('shipping_name')? 'is-invalid' : ''}}" value="{{Auth::user()? Auth::user()->name : ''}}" placeholder="Name">
 
                             @if($errors->has('shipping_name'))
@@ -57,7 +57,7 @@
                                     <strong>{{$errors->first('address')}}</strong>
                                 </span>
                             @endif
-                        </div>
+                        </div> --}}
 
                         <div class="payment-area my-4 py-5 px-3 bg-light">
                             <input type="submit" value="Proceed to payment" class="btn btn-primary">
@@ -74,7 +74,7 @@
                         <div class="card-body">
                             <p>Total products = {{Cart::content()->count()}}</p>
                             <p>Product Cost = {{Cart::total()}} FCFA</p>
-                            <p>Shipping cost = 0.00 FCFA</p>
+
                             <p><strong>Total cost = {{Cart::total()}} FCFA</strong></p>
                         </div>
                     </div>
@@ -82,5 +82,7 @@
             </div>
         </div>
     </div>
+    {{-- <a href="/download/filename.pdf">File Name</a> --}}
 @endsection
-{{-- <a href="/download/filename.pdf">File Name</a> // update to your own "filename.ext" --}}
+{{-- update to your own "filename.ext" --}}
+

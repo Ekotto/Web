@@ -26,8 +26,8 @@
                     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="pk_test_7xVvmxzKaoeFzuBZZ18WdwKy00bmfx80CA"
                             data-amount=""
-                            data-name="Bookshop"
-                            data-description="Bookshop payment"
+                            data-name="Bookify"
+                            data-description="Bookify payment"
                             data-locale="auto">
                     </script>
                 </form>

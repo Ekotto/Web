@@ -74,7 +74,7 @@
                     @endif
                 </div>
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     {!! Form::label('discount_rate', 'Discount Rate') !!}
                     {!! Form::text('discount_rate', null, ['class'=>'form-control '.($errors->has('discount_rate')? 'is-invalid': '')]) !!}
                     @if($errors->has('discount_rate'))
@@ -82,10 +82,10 @@
                             <strong>{{$errors->first('discount_rate')}}</strong>
                         </span>
                     @endif
-                </div>
+                </div> --}}
                 <input type="hidden" name="price">
 
-                <div class="form-group">
+                {{-- <div class="form-group">
                     {!! Form::label('quantity') !!}
                     {!! Form::text('quantity', null, ['class'=>'form-control '.($errors->has('quantity')? 'is-invalid': '')]) !!}
                     @if($errors->has('quantity'))
@@ -93,7 +93,7 @@
                             <strong>{{$errors->first('quantity')}}</strong>
                         </span>
                     @endif
-                </div>
+                </div> --}}
 
                 <div class="form-group">
                     {!! Form::label('image_id', 'Book Image') !!}

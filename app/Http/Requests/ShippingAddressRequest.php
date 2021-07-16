@@ -24,9 +24,9 @@ class ShippingAddressRequest extends FormRequest
     public function rules()
     {
         return [
-            'shipping_name' => 'required',
-            'mobile_no' =>'required',
-            'address' => 'required'
+            // 'shipping_name' => 'required',
+            // 'mobile_no' =>'required',
+            // 'address' => 'required'
         ];
     }
 }

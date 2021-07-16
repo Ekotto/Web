@@ -33,8 +33,8 @@ class BooksUpdateRequest extends FormRequest
             'category_id'   => 'required',
             'image_id'      => 'image|max:1000',
             'init_price'    => 'required|numeric',
-            'discount_rate' => 'required|numeric|max:100',
-            'quantity'      => 'required|numeric'
+            // 'discount_rate' => 'numeric|max:100',
+            // 'quantity'      => 'numeric'
         ];
 
     }

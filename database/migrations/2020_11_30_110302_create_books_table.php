@@ -21,9 +21,9 @@ class CreateBooksTable extends Migration
             $table->bigInteger('author_id')->unsigned()->index();
             $table->bigInteger('category_id')->unsigned()->index();
             $table->bigInteger('image_id')->unsigned()->index();
-            $table->bigInteger('quantity');
+            $table->bigInteger('quantity')-> nullable();
             $table->bigInteger('init_price');
-            $table->integer('discount_rate');
+            $table->integer('discount_rate')->nullable();
             $table->double('price');
             $table->softDeletes();
             $table->timestamps();
