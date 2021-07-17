@@ -36,7 +36,7 @@ class AdminBooksController extends AdminBaseController
             $name = time().$file->getClientOriginalName();
 
             $image_resize = Photo::make($file->getRealPath());
-            $image_resize->resize(340,380);
+            $image_resize->resize(960,640);
             $image_resize->save(public_path('assets/img/' .$name));
 
             $image = Image::create(['file'=>$name]);
