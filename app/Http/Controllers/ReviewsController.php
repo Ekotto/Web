@@ -25,7 +25,7 @@ class ReviewsController extends Controller
 
         $review = Review::create($input);
 
-        return redirect()->back()->with('success_message', 'Your review added');
+        return redirect()->back()->with('success_message', 'Your review is added');
     }
 
 }

@@ -30,7 +30,7 @@ Bookify - Book details
                                         @if(($book->quantity) > 1)
                                             <div class="badge badge-success mb-2">In Stock</div>
                                         @else
-                                            <div class="badge badge-danger mb-2">out of Stock</div>
+                                            <div class="badge badge-danger mb-2"></div>
                                         @endif
                                         @if($book->discount_rate)
                                             <h6><span class="badge badge-warning">{{$book->discount_rate}}% Discount</span></h6>

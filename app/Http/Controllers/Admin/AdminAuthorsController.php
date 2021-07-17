@@ -43,7 +43,7 @@ class AdminAuthorsController extends Controller
             'name' => 'required',
             'slug' => 'required|unique:authors',
             'bio'  => 'required',
-            'image_id'=> 'image|max:500'
+            'image_id'=> 'image|max:1024'
         ];
         $message = [
             'image_id.image' => 'Image should be PNG, jpg, jpeg type'
@@ -56,7 +56,7 @@ class AdminAuthorsController extends Controller
             $name = time().$file->getClientOriginalName();
 
             $image_resize = Photo::make($file->getRealPath());
-            $image_resize->resize(500,500);
+            $image_resize->resize(150,150);
             $image_resize->save(public_path('assets/img/' .$name));
 
             $image = Image::create(['file'=>$name]);

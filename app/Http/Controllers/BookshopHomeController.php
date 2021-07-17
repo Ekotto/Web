@@ -12,14 +12,28 @@ class BookshopHomeController extends Controller
     public function index()
     {
         # Home page Books
-        $engineering_books = Book::with('category')->whereHas('category', function($query) {
-            $query->where('slug', 'engineering'); })
+        $fitness_books = Book::with('category')->whereHas('category', function($query) {
+            $query->where('slug', 'fitness'); })
             ->take(8)
             ->latestFirst()
             ->get();
-        $literature_books = Book::with('category', 'author', 'image')
+        $health_books = Book::with('category', 'author', 'image')
             ->whereHas('category', function ($query){
-                $query->where('slug', 'literature'); })
+                $query->where('slug', 'health'); })
+            ->take(4)
+            ->latestFirst()
+            ->get();
+
+         $health_books = Book::with('category', 'author', 'image')
+            ->whereHas('category', function ($query){
+                $query->where('slug', 'marketing'); })
+            ->take(4)
+            ->latestFirst()
+            ->get();
+
+         $society_books = Book::with('category', 'author', 'image')
+            ->whereHas('category', function ($query){
+                $query->where('slug', 'society'); })
             ->take(4)
             ->latestFirst()
             ->get();
@@ -28,7 +42,7 @@ class BookshopHomeController extends Controller
             ->orderBy('discount_rate', 'desc')
             ->take(6)
             ->get();
-        return view('public.home', compact('engineering_books', 'discount_books', 'literature_books'));
+        return view('public.home', compact('fitness_books', 'discount_books', 'health_books'));
     }
     public function allBooks()
     {
@@ -39,7 +53,7 @@ class BookshopHomeController extends Controller
                     ->paginate(16);
         return view('public.book-page', compact('books'));
     }
-    public function discountBooks()
+    public function food()
     {
         # ComposerServiceProvider load here
         $discountTitle = "All discount books";
@@ -48,6 +62,8 @@ class BookshopHomeController extends Controller
             ->where('discount_rate', '>', 0)
             ->paginate(16);
         return view('public.book-page', compact('books', 'discountTitle'));
+
+
     }
     /*
      * Books filter by category

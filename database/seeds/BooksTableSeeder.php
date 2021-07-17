@@ -21,7 +21,7 @@ class BooksTableSeeder extends Seeder
         $books = [];
 
 
-        for ($i = 1; $i <= 50; $i++)
+        for ($i = 1; $i <= 10; $i++)
         {
 
             $init_price = rand(250, 400);

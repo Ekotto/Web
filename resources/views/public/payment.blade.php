@@ -24,7 +24,7 @@
                     @csrf
                     <input type="hidden" name="cart_total" value="{{Cart::total()}}">
                     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                            data-key="pk_test_7xVvmxzKaoeFzuBZZ18WdwKy00bmfx80CA"
+                            data-key="pk_test_51J8Zv4C8ln52AfWo9EF7XCCFRUgKsP08BgevfXUxtiDp19ggmqkc9U6Nlw8hgUeIjhVibnkSW8JFrjSjVDuVJTqm00QoScjKit"
                             data-amount=""
                             data-name="Bookify"
                             data-description="Bookify payment"

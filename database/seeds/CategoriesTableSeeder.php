@@ -17,38 +17,38 @@ class CategoriesTableSeeder extends Seeder
 
         DB::table('categories')->insert([
             [
-                'name' => 'Engineering',
-                'slug' => 'engineering',
+                'name' => 'Fitness',
+                'slug' => 'fitness',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
-                'name'  => 'Sociology',
-                'slug'  => 'sociology',
+                'name'  => 'Marketing',
+                'slug'  => 'marketing',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
-                'name'  => 'Literature',
-                'slug'  => 'literature',
+                'name'  => 'Health',
+                'slug'  => 'health',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
             [
-                'name'  => 'Business Studies',
-                'slug'  => 'business-studies',
+                'name'  => 'Food',
+                'slug'  => 'food',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
+            // [
+            //     'name'  => 'Economics',
+            //     'slug'  => 'economics',
+            //     'created_at' => Carbon::now(),
+            //     'updated_at' => Carbon::now()
+            // ],
             [
-                'name'  => 'Economics',
-                'slug'  => 'economics',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
-            [
-                'name'   => 'Medical',
-                'slug'   => 'medical',
+                'name'   => 'Society',
+                'slug'   => 'Society',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now()
             ],

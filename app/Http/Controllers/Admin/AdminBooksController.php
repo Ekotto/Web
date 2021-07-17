@@ -28,7 +28,7 @@ class AdminBooksController extends AdminBaseController
         $input = $request->all();
 
         $count_discount = (($request->init_price * $request->discount_rate)/100);
-        $final_price  = $request->init_price - $count_discount;
+        $final_price  = $request->init_price; //- $count_discount;
         $input['price'] = $final_price;
 
         if($file = $request->file('image_id'))
@@ -60,7 +60,7 @@ class AdminBooksController extends AdminBaseController
         $input = $request->all();
 
         $count_discount = (($request->init_price * $request->discount_rate)/100);
-        $final_price  = $request->init_price - $count_discount;
+        $final_price  = $request->init_price; //- $count_discount;
         $input['price'] = $final_price;
 
         if($file = $request->file('image_id'))

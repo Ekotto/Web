@@ -16,7 +16,7 @@ class AuthorsTableSeeder extends Seeder
         $faker = Factory::create();
         $authors = [];
 
-        for($i = 1; $i <= 8; $i++)
+        for($i = 1; $i <= 3; $i++)
         {
             $authors [] = [
                 'name' => $faker->name,

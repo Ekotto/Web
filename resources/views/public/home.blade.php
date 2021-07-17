@@ -45,14 +45,14 @@
                     <div class="content-area">
                         <div class="card my-4">
                             <div class="card-header bg-dark">
-                                <h4><a href="{{route('category', 'engineering')}}" class="text-white">Engineering Books</a></h4>
+                                <h4><a href="{{route('category', 'fitness')}}" class="text-white">Fitness Books</a></h4>
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    @if(! $engineering_books->count())
+                                    @if(! $fitness_books->count())
                                        <div class="alert alert-warning">No books availble</div>
                                     @else
-                                        @foreach($engineering_books as $book)
+                                        @foreach($fitness_books as $book)
                                             <div class="col-lg-3 col-6">
                                                 <div class="book-wrap">
                                                     <div class="book-image mb-2">
@@ -79,20 +79,20 @@
                                     @endif
                                 </div>
                                 <div class="show-more pt-2 text-right">
-                                    <a href="{{route('category', 'engineering')}}" class="text-secondary">See More <i class="fas fa-angle-double-right"></i></a>
+                                    <a href="{{route('category', 'fitness')}}" class="text-secondary">See More <i class="fas fa-angle-double-right"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="card my-4">
                             <div class="card-header bg-dark">
-                                <h4><a href="{{route('category', 'literature')}}" class="text-white">Literature Books</a></h4>
+                                <h4><a href="{{route('category', 'Health')}}" class="text-white">Health Books</a></h4>
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    @if(! $literature_books->count())
+                                    @if(! $health_books->count())
                                         <div class="alert alert-warning">No books availble</div>
                                     @else
-                                        @foreach($literature_books as $book)
+                                        @foreach($health_books as $book)
                                             <div class="col-lg-3 col-6">
                                                 <div class="book-wrap">
                                                     <div class="book-image mb-2">
@@ -119,7 +119,7 @@
                                     @endif
                                 </div>
                                 <div class="show-more pt-2 text-right">
-                                    <a href="{{route('category', 'literature')}}" class="text-secondary">See More <i class="fas fa-angle-double-right"></i></a>
+                                    <a href="{{route('category', 'Health')}}" class="text-secondary">See More <i class="fas fa-angle-double-right"></i></a>
                                 </div>
                             </div>
                         </div>

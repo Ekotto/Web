@@ -35,14 +35,14 @@ class CheckoutController extends Controller
 
     public function pay(Request $request)
     {
-        Stripe::setApiKey('sk_test_2DCNbttQJFTfjupPjhseb3mc00Jm3oE7L6');
+        Stripe::setApiKey('sk_test_51J8Zv4C8ln52AfWofDneu4jurCwZSIOgFZldSVdwKAPWfwkiVbEPCqGhVpvxFiukfbwFdwmHYBHlCONDMBBh8rAs00EjAHsbB9');
         $token = $request->stripeToken;
         $total = $request->cart_total;
 
         $charge = Charge::create([
             'amount' => $total*100,
-            'currency' => 'BDT',
-            'description' => 'Book payments',
+            'currency' => 'XAF',
+            'description' => 'Bookify payments',
             'source' => $token,
         ]);
 
@@ -52,7 +52,7 @@ class CheckoutController extends Controller
         $shipping_address = ShippingAddress::where('user_id', $user->id)->latest()->first();
 
         $order->user_id = $user->id;
-        $order->shipping_id = $shipping_address->id;
+        // $order->shipping_id = $shipping_address->id;
         $order->total_price = $total;
         $order->payment_type = 'card';
 
